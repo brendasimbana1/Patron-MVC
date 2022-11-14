@@ -7,18 +7,18 @@ Vista::Vista()
 
 void Vista::actualizarNota()
 {
+    int a;
     int nota = 0;
-    int n;
     do{
         cout << "Ingrese la posicion de la nota a actualizar: ";
-        cin >> n;
-    } while (n < 1 or n > 3);
+        cin >> a;
+    } while (a < 1 or a > 3);
     do{
-        cout << "Ingrese la nota " << n << ": ";
+        cout << "Ingrese la nota " << a << ": ";
         cin >> nota;
     } while (nota < 0 or nota > 10);
-    controlador->actualizarNota(n, nota);
-    cout << "Nota " << n <<" actualizada! " << endl;
+    controlador->actualizarNota(a, nota);
+    cout << "Nota " << a <<" actualizada! " << endl;
 }
 
 void Vista::notaAgregada(){
